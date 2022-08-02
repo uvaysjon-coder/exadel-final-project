@@ -1,0 +1,16 @@
+appName: mysql
+appImage: mysql
+appVersion: 8.0
+appReplicas: 1
+containerPort: 3306
+containerEnvVars:
+  - name: MYSQL_DATABASE
+    value: "laravel"
+  - name: MYSQL_ROOT_PASSWORD
+    value: "laravel-password"
+  - name: MYSQL_USER
+    value: "laravel-user"
+  - name: MYSQL_PASSWORD
+    value: "laravel-password"
+serviceType: ClusterIP
+servicePort: 3306

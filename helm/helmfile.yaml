@@ -1,0 +1,16 @@
+releases:
+  - name: database
+    chart: charts/db
+    values:
+      - values/db.yaml
+      - appReplicas: '2'
+      - volume: "mysql-data"
+  - name: phpmyadmin
+    chart: charts/app
+    values:
+      - values/phpmyadmin.yaml
+  - name: app
+    chart: charts/app
+    values:
+      - values/app.yaml
+

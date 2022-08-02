@@ -1,0 +1,18 @@
+appName: phpmyadmin
+appImage: phpmyadmin
+appVersion: 5.1
+appReplicas: 1
+containerPort: 80
+containerEnvVars:
+  - name: PMA_ARBITRARY
+    value: "0"
+  - name: PMA_HOST
+    value: "mysql"
+  - name: PMA_USER
+    value: "laravel-user"
+  - name: PMA_PASSWORD
+    value: "laravel-password"
+  - name: PMA_PORT
+    value: "3306"
+serviceType: ClusterIP
+servicePort: 8888

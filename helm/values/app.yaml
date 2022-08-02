@@ -1,0 +1,10 @@
+appName: app
+appImage: shukrulloabdukodirov/laravel-image
+appVersion: latest
+appReplicas: 1
+containerPort: 80
+containerEnvVars:
+  - name: PORT
+    value: "80"
+serviceType: LoadBalancer
+servicePort: 80
